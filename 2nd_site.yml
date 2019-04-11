@@ -1,0 +1,6 @@
+---
+
+- hosts: init_ansible
+  gather_facts: true
+  roles:
+    - init_ansible

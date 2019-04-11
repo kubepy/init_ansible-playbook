@@ -1,0 +1,23 @@
+---
+# tasks file for init_ansible
+- name: Add user ansible
+  user:
+    name: "{{ init_ansible_user }}"
+    comment: "Automation Management"
+    uid: 9999
+    state: present
+
+- name:  Copy sudoers file for {{ init_ansible_user }}
+  template:
+    src: ansible_sudoers.j2
+    dest: "/etc/sudoers.d/{{ init_ansible_user }}"
+    mode: u=r,g=r,o= 
+    owner: root
+    group: root
+
+- name:  Add authorized_key for {{ init_ansible_user }}
+  authorized_key:
+    user: "{{ init_ansible_user }}"
+    key: "{{ lookup('file', '{{ init_ansible_pub }}') }}"
+    state: present
+

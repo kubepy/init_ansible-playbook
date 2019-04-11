@@ -1,0 +1,5 @@
+---
+# defaults file for init_ansible
+
+init_ansible_user: svcam
+init_ansible_pub: ~/.ssh/id_rsa.pub

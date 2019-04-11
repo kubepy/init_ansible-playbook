@@ -1,0 +1,6 @@
+---
+# defaults file for create_inventory
+
+vcenter_hostname: null
+vcenter_username: null
+vcenter_password: null
