@@ -2,6 +2,8 @@
 localhost ansible_connection=local
 
 [local:vars]
+init_ansible_user=svcam
+init_ansible_pub=~/.ssh/id_rsa.pub
 vcenter_hostname=vcenter.example.com
 vcenter_username=username@vsphere.local
 vcenter_password=password
