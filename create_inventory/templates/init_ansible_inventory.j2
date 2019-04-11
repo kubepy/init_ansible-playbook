@@ -1,11 +1,13 @@
 [init_ansible:vars]
-ansible_connection: ssh
-ansible_user: oseroot
-ansible_become: yes
-ansible_become_method: sudo
+ansible_connection=ssh
+ansible_user=oseroot
+ansible_become=yes
+ansible_become_method=sudo
+init_ansible_user={{ init_ansible_user }}
+init_ansible_pub={{ init_ansible_pub }}
 
 [init_ansible]
 {% for host in groups['vmhost'] %}
-host
+{{ host }}
 {% endfor %}
 

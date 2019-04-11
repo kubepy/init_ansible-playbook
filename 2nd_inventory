@@ -1,6 +1,6 @@
-[init_ansible]
-localhost ansible_connection=local
-
 [init_ansible:vars]
 init_ansible_user=svcam
 init_ansible_pub=~/.ssh/id_rsa.pub
+
+[init_ansible]
+localhost ansible_connection=local
