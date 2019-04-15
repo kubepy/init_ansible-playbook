@@ -1,6 +1,7 @@
 ---
 
 - hosts: init_ansible
-  gather_facts: true
+  gather_facts: false
   roles:
     - init_ansible
+    - rename_ansible_log

@@ -4,3 +4,4 @@
   gather_facts: False
   roles:
     - create_inventory
+    - rename_ansible_log
